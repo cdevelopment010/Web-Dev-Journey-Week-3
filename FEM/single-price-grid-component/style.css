@@ -21,8 +21,8 @@ html {
 }
 
 body {
-    height: 100vh; 
-    width: 100vw; 
+    height: 100%; 
+    width: 100%; 
     background-color: var(--light-gray);
     font-family: 'Karla', sans-serif;
     position: relative; 
@@ -31,20 +31,16 @@ body {
 
 
 main {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%);
     width: 90vw;
-    height: 90%;
-    border-radius: 5px;
     overflow: hidden;
+    border-radius: 5px;
     box-shadow: 0 10px 25px 5px rgba(0,0,0,.25);
+    margin: 2rem auto 2rem auto;
 }
 
 section {
-    padding: 2rem 1rem;
-    height: 33.35%;
+    padding: 2rem 1rem 1rem 2rem;
+    height: 100%;
 }
 
 h1, h3 {
@@ -76,6 +72,7 @@ li {
     color: var(--grayish-blue);
     line-height: 150%;
     opacity: 80%;
+    width: 100%;
 }
 
 
@@ -88,7 +85,6 @@ li {
 
 .callout {
     font-size: 2rem;
-    margin-bottom: 1rem;
     display: flex; 
     align-items: center;
 }
@@ -102,7 +98,6 @@ li {
 
 .subscription p {
     color: var(--light-gray);
-    margin-bottom: 1.5rem;
 }
 
 .subscription button {
@@ -114,7 +109,7 @@ li {
     padding: 1rem;
     font-weight: 700;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,.25);
-    margin-top: 1.5rem;
+    margin: 1.5rem auto 1.5rem auto;
 
 }
 
@@ -125,9 +120,9 @@ li {
     color: white;
 }
 
+
 .why-us li {
     color: var(--light-gray);
-    opacity: 80%;
     padding-top: 0.5rem;
 }
 
@@ -137,7 +132,7 @@ li {
 @media screen and (min-width: 90em) {
     main {
         width: 50%;
-        height: 50%; 
+        height: 60%; 
         display: grid;
         grid-template-columns: repeat(2,1fr);
         grid-template-rows: repeat(2,1fr);
@@ -158,6 +153,11 @@ li {
         grid-area: subscription;
     }
 
+    .subscription button { 
+        width: 90%;
+        margin-top: 3rem;
+    }
+
     .why-us {
         grid-area: why-us;
     }
@@ -165,4 +165,5 @@ li {
     .subscription button {
         margin-top: 2rem;
     }
+
 }
